@@ -1,6 +1,8 @@
+var button = document.querySelector('button');
+
 var onAuthorize = function() {
-  console.log(localStorage.getItem('trello_token'));
-  // Trello.deauthorize();
+  button.remove();
+  $('body').append('<span style="color:green;">Compte liée</span>');
 }
 
 Trello.authorize({
@@ -18,7 +20,6 @@ var authorize = function(){
   });
 }
 
-var button = document.querySelector('button');
 button.addEventListener('click', function(){
   authorize();
 });
