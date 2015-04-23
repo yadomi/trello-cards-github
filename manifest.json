@@ -1,0 +1,22 @@
+{
+  "manifest_version": 2,
+  "version": "1.0",
+  "name": "Trello Cards for Github",
+  "icons": {
+    "128": "trello.png"
+  },
+  "author": "Felix Yadomi",
+  "description": "This extension adds Trello cards to GitHub's Pull Request page",
+  "web_accessible_resources": ["trello.png", "callback.html", "src/template.mst"],
+  "background": {
+    "scripts": ["dist/background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://github.com/*"
+        ],
+      "js": ["dist/content.js"]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+<div class="timeline-comment-wrapper">
+    <a href="{{url}}"><img alt="@trello" class="timeline-comment-avatar" height="48" src="{{avatar}}" width="48"></a>
+    <div class="comment previewable-edit timeline-comment">
+        <div class="timeline-comment-header ">
+            <div class="timeline-comment-header-text">
+                <strong>
+                  <a href="/trello" class="author">Trello</a> 
+                </strong>
+                ticket mis à jour à {{dateFormated}}
+            </div>
+        </div>
+        <div class="comment-content">
+          <div class="comment-body">
+            {{#labels}}
+              <span style="color: #eee; padding: 2px 5px; font-size: 0.8em; text-transform: uppercase; border-radius: 2px;background-color:{{color}};">{{name}}</span>
+            {{/labels}}
+            <h2>{{name}}</h2>
+          </div>
+        </div>
+    </div>
+</div>
