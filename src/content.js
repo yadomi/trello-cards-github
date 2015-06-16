@@ -15,6 +15,7 @@ var prepareTemplate = function(cardInfo) {
   var uri = chrome.extension.getURL('src/template.mst');
   cardInfo.avatar = chrome.extension.getURL('trello.png');
   cardInfo.dateFormated = new Date(cardInfo.dateLastActivity).toString();
+  cardInfo.detail = markdown.toHTML( cardInfo.desc );
   $.get(uri, function(template) {
     var html = Mustache.render(template, cardInfo);
     insertToDOM(html);
