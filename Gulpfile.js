@@ -11,7 +11,7 @@ gulp.task('concat:callback', function() {
 });
 
 gulp.task('concat:content', function() {
-  return gulp.src(['./src/mustache.js', './src/jquery.js', './src/trello.js', './src/content.js'])
+  return gulp.src(['./src/markdown.js', './src/mustache.js', './src/jquery.js', './src/trello.js', './src/content.js'])
     .pipe(uglify())
     .pipe(concat('content.js'))
     .pipe(gulp.dest('./dist/'));
