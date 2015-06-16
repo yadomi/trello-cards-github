@@ -15,6 +15,7 @@
               <span style="color: #eee; padding: 2px 5px; font-size: 0.8em; text-transform: uppercase; border-radius: 2px;background-color:{{color}};">{{name}}</span>
             {{/labels}}
             <h2>{{name}}</h2>
+            {{{detail}}}
           </div>
         </div>
     </div>
